@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Array Operations</title>
+
+<style>
+
+.container
+{
+    border:2px solid black;
+    padding:20px;
+    width:400px;
+}
+
+p
+{
+    background-color:lightblue;
+    color:black;
+    border:2px solid darkblue;
+    padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>Array Operations</h3>
+
+Value:
+<input type="text" id="value">
+
+<br><br>
+
+<button onclick="checkValue()">Check Found</button>
+<button onclick="addEnd()">Add To End</button>
+
+<br><br>
+
+Index:
+<input type="text" id="index">
+
+<br><br>
+
+<button onclick="insertIndex()">Insert At Index</button>
+<button onclick="removeIndex()">Remove At Index</button>
+
+<br><br>
+
+<p id="result"></p>
+
+<p id="arrayDisplay"></p>
+
+</div>
+
+<script src="array.js"></script>
+
+</body>
+</html>

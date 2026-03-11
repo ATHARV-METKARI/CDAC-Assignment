@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Difference between var and let</title>
+
+<script>
+
+function showDifference() {
+
+    var a = 10;
+
+    if(true){
+        var a = 20;
+        console.log("var inside block:", a);
+    }
+
+    console.log("var outside block:", a); 
+
+
+    let b = 10;
+
+    if(true){
+        let b = 20;
+        console.log("let inside block:", b);
+    }
+
+    console.log("let outside block:", b);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Difference Between var and let</h2>
+
+<button onclick="showDifference()">Click to See Output</button>
+
+<p>Check the browser console to see the result.</p>
+
+</body>
+</html>
