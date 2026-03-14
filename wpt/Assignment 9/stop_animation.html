@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Animation stop add on</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+#box{
+    width:50px;
+    height:50px;
+    background-color:red;
+    position:relative;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+
+    $("#start").click(function(){
+        $("#box").animate({
+            left:'200px',
+            width:'100px',
+            height:'100px'
+        }, 3000);
+    });
+
+    $("#stop").click(function(){
+        $("#box").stop();
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+<br><br>
+
+<div id="box"></div>
+
+</body>
+</html>
