@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX POST Example</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+    $("#submit").click(function(){
+
+        var title = $("#title").val();
+        var completed = $("#completed").val();
+
+        $.ajax({
+            url: "https://jsonplaceholder.typicode.com/todos",
+            type: "POST",
+            data: {
+                title: title,
+                completed: completed
+            },
+
+            success: function(response){
+                $("#result").html(
+                    "Data Posted Successfully <br>" +
+                    "ID: " + response.id + "<br>" +
+                    "Title: " + response.title + "<br>" +
+                    "Completed: " + response.completed
+                );
+            }
+
+        });
+
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+
+<h3>Add Todo</h3>
+
+Title:
+<input type="text" id="title"><br><br>
+
+Completed:
+<select id="completed">
+<option value="true">True</option>
+<option value="false">False</option>
+</select>
+
+<br><br>
+
+<button id="submit">Submit</button>
+
+<p id="result"></p>
+
+</body>
+</html>
