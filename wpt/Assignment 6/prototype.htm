@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prototype Example</title>
+<script>
+
+// Constructor function
+function Student(name, age)
+{
+    this.name = name;
+    this.age = age;
+}
+
+// Adding print function using prototype
+Student.prototype.print = function()
+{
+    document.write("Name: " + this.name + "<br>");
+    document.write("Age: " + this.age + "<br><br>");
+}
+
+// Creating two objects
+var s1 = new Student("Atharv", 22);
+var s2 = new Student("Rahul", 21);
+
+// Calling print function
+s1.print();
+s2.print();
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
