@@ -1,0 +1,1 @@
+console.log("started from package.json usign start")
